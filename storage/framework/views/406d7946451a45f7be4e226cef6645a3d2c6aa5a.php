@@ -1,0 +1,1 @@
+<h2>welcome Admin</h2><?php /**PATH C:\xampp\htdocs\Laravel Project\Admin_login\resources\views/dashboard.blade.php ENDPATH**/ ?>
