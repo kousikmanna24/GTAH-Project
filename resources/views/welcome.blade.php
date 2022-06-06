@@ -30,7 +30,7 @@
             <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
             <a href="/admin/login" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Admin Login</a>
-            <a href="/banner" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Banner</a>
+            <a href="/view-adding-delete-banner" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Banner</a>
             
             
 

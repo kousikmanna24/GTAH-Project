@@ -361,6 +361,18 @@
                     @endif -->
 
 
+                    <!-- ////////////////////////////Successfull mesage//////////////////////////////////// -->
+
+                    @if(session()->has('message'))
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert">X</button>
+
+                        {{session()->get('message')}}
+
+                    </div>
+                    @endif
+
+
                     <!-- /////////FORM VALIDATION////////// -->
                     @if($errors)
                     @foreach($errors->all() as $errors)
@@ -478,12 +490,10 @@
 
 
                             <div id="example0_wrapper" class="dataTables_wrapper no-footer">
-                                <!-- <div class="dataTables_length" id="example0_length"><label>Show <select name="example0_length" aria-controls="example0" class="">
-                                            <option value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="50">50</option>
-                                            <option value="100">100</option>
-                                        </select> entries</label></div> -->
+
+                               
+
+
                                 <!-- <div id="example0_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="example0"></label></div> -->
                                 <table id="example0" class="table table-striped table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="example0_info">
                                     <!-- <thead>
@@ -583,7 +593,7 @@
 
                                     <tbody>
                                         @php
-                                        
+
                                         $i = 1;
                                         @endphp
 
@@ -593,14 +603,14 @@
                                         <tr>
                                             <td>{{ $i++ }}</td>
                                             <!-- <th>{{$banner['id']}}</th> -->
-                                            <td width="15%" > <img src="https://images.unsplash.com/photo-1541569863345-f97c6484a917?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="BannerImage" width="100%" ></td>
+                                            <td width="15%"> <img src="https://images.unsplash.com/photo-1541569863345-f97c6484a917?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="BannerImage" width="100%"></td>
                                             <td>{{$banner['bannerimagealt']}}</td>
-                                            <td width="15%" > <img src="https://images.unsplash.com/photo-1638913660106-73b4bac0db09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="OrderImage" width="100%" ></td>
+                                            <td width="15%"> <img src="https://images.unsplash.com/photo-1638913660106-73b4bac0db09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="OrderImage" width="100%"></td>
                                             <td>{{$banner['imageorderalt']}}</td>
-                                            <td width="15%" > <img src="https://images.unsplash.com/photo-1581478730747-4850812b9b14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="RightImage" width="100%" ></td>
+                                            <td width="15%"> <img src="https://images.unsplash.com/photo-1581478730747-4850812b9b14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="RightImage" width="100%"></td>
                                             <td>{{$banner['imagerightal']}}</td>
                                             <td>{{$banner['status']}}</td>
-                                            <td><a class="btn btn-danger" onclick="if (!confirm('Are you sure?')) { return false }" href={{"delete/".$banner['id']}}>Delete</a></td>
+                                            <td><a class="btn btn-danger" onclick="if (!confirm('Are you sure you want to delete?')) { return false }" href={{"delete/".$banner['id']}}>Delete</a></td>
 
                                         </tr>
 
@@ -863,6 +873,15 @@ Data Tables
         });
     </script>
 
+
+
+    <!-- <script type="text/javascript">
+        $("document").ready(function() {
+
+            $("div.alert").remove();
+
+        },5000);
+    </script> -->
 
     <!-- Mirrored from egemem.com/theme/kode/v1.1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jan 2016 18:52:09 GMT -->
 </body>
