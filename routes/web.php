@@ -33,7 +33,8 @@ Route::get('admin/logout', [beusersController::class, 'logout']);
 Route::post('add-banner',[BannerController::class,'addBanner']);
 
 
-Route::get('banner',[bannerController::class,'show']);
+Route::get('view-adding-delete-banner',[bannerController::class,'show']);
+
 Route::get('delete/{id}',[BannerController::class,'delete']);
 // Route::get('table',[bannerController::class,'show']);
 // Route::get('delete/{id}',[BannerController::class,'delete']);
